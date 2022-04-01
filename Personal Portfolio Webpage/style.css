@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* Navigation */
+
+#navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #f15e5e;
+    border-bottom: 2px solid #000;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    padding: 0px 40px;
+    min-height: 70px;
+    margin: auto 0px;
+}
+
+.nav-list-item {
+    margin-left: 30px;
+}
+
+.nav-link {
+    color: white;
+}
+
+/* Content */
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(60deg, #3d3d3d, rgb(29, 29, 29)) ;
+}
+
+#welcome-header {
+    font-size: 3rem;
+    color: white;
+}
+
+#welcome-caption {
+    font-size: 2rem;
+    color: #f15e5e;
+}
+
+#projects {
+    text-align: center;
+    padding: 7rem 2rem;
+    background-image: linear-gradient(120deg, #6f6dff, #3c55e4);
+}
+
+#projects-header {
+    display: inline;
+    color: white;
+    font-size: 2rem;
+    padding: 5px 10px;
+    border-bottom: 4px solid #fff;
+}
+
+.projects-list {
+    margin: 50px auto 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    max-width: 1280px;
+}
+
+.project-link {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #0f1527;
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+    border-radius: 2px;
+}
+
+.project-image {
+    flex-grow: 2;
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-name {
+    font-size: 1.2rem;
+    padding: 10px 5px;
+    color: white;
+}
+
+.project-name::before {
+    content: "<";
+    color: #ccab65;
+    vertical-align: middle;
+    margin: 0.5rem;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.project-name::after {
+    content: "/>";
+    color: #ccab65;
+    vertical-align: middle;
+    margin: 0.5rem;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.project-name:hover::before {
+    opacity: 1;
+}
+
+.project-name:hover::after {
+    opacity: 1;
+}
